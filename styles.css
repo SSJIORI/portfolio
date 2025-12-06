@@ -254,9 +254,9 @@ section {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-image: url('assets/self_image.jpg');
+    background-image: url('assets/self_portrait.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: start;
     border: 3px solid var(--border-color);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -377,9 +377,14 @@ section {
 
 .experience-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 968px) {
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 .skill-category {
